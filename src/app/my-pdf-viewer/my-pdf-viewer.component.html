@@ -1,0 +1,29 @@
+<p>
+my-pdf-viewer works!
+</p>
+
+<!-- -->
+<div *ngIf="stickToPage && showAll || !showAll" class="mb">
+      <button (click)="incrementPage(-1)" mat-button type="button">
+        Previous
+      </button>
+      <span *ngIf="pdf">of {{ pdf.numPages }}</span>
+      <button (click)="incrementPage(1)" mat-button type="button">
+        Next
+      </button>
+      <button (click)="incrementPage(0)" mat-button type="button">
+        Back to Page 1
+      </button>
+</div>
+
+
+
+<div class="pdf-container">  
+  <pdf-viewer #mypdfviewer [src]="src"
+              [original-size]="false" 
+              [(page)]="page"
+              [show-all]="showAll"
+              [stick-to-page]="stickToPage"
+              [show-borders]="1"
+  ></pdf-viewer>
+  

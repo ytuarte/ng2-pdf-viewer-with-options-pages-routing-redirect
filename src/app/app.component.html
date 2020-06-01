@@ -1,0 +1,50 @@
+<h2>PDF Viewer</h2>
+
+<!-- 
+<button type="button" class="btn btn-primary-outline" [routerLink]="['/my-pdf-viewer']">My Viewer</button>
+
+<br/>
+<br/>
+<button type="button" class="btn btn-primary" (click)="showPdf()">Redirect to My Viewer</button>
+<router-outlet></router-outlet>
+-->
+
+
+  <!-- 
+<div class="pdf-controls">
+    <button class="btn btn-primary pull-right" (click)="rotate('LEFT')">Rotate Left</button>
+    <button class="btn btn-primary pull-right" (click)="rotate('RIGHT')">Rotate Right</button>
+    <button class="btn btn-primary pull-right" (click)="rotate('RESET')">Reset Rotation</button>
+</div>
+<div class="pdf-controls">
+  <button class="btn btn-primary pull-right" (click)="zoom('IN')">Zoom In</button>
+  <button class="btn btn-primary pull-right" (click)="zoom('OUT')">Zoom Out</button>
+  <button class="btn btn-primary pull-right" (click)="zoom('RESET')">Reset Zoom</button>
+</div>
+-->
+
+<div *ngIf="stickToPage && showAll || !showAll" class="mb">
+  <button (click)="incrementPage(-1)" mat-button type="button">
+        Previous
+  </button>
+  <button (click)="incrementPage(1)" mat-button type="button">
+        Next
+  </button>
+  <button (click)="incrementPage(0)" mat-button type="button">
+        Back to Page 1
+  </button>
+</div>
+
+<div class="pdf-container">  
+  <pdf-viewer #mypdfviewer [src]="src"
+              [original-size]="false" 
+              [rotation]="myrotation"
+              [zoom]="myzoom"
+              [(page)]="page"
+              [show-all]="showAll"
+              [stick-to-page]="stickToPage"
+              [show-borders]="1"
+  ></pdf-viewer>
+</div>
+-->
+

@@ -1,0 +1,8 @@
+div {
+  margin:4px, 4px; 
+  padding:4px; 
+  width: auto;    
+  max-height: 100vh;
+  overflow: auto;
+  text-align:justify; 
+}
