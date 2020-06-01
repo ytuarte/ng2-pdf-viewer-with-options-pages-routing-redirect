@@ -10,19 +10,28 @@ import { PdfViewerComponent  } from 'ng2-pdf-viewer';
 export class MyPdfViewerComponent implements OnInit {
 
   src = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+  //src;
 
   constructor() { }
 
   ngOnInit() {
     console.log("MyPdfViewerComponent");
+    //this.src = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
   }
 
+/*
   ngAfterViewInit() {
     console.log('MyPdfViewerComponent.ngAfterViewInit():');
     setTimeout(() => {
-          this.page = 28;
-        }, 500);
+      console.log('MyPdfViewerComponent.ngAfterViewInit.timeout:');
+          this.page = 0;
+        }, 5000);
   }
+*/
+
+
+
+
 
   //paging
   page=1;

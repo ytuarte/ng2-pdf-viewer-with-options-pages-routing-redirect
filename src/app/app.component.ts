@@ -15,7 +15,8 @@ export class AppComponent  {
 
   }
   src = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
- 
+  //src = "./assets/SamplePDF2Pgs2.pdf";
+  
   @ViewChild(PdfViewerComponent, {static: false}) 
   pdfComponent: PdfViewerComponent;
 
@@ -24,6 +25,26 @@ export class AppComponent  {
     console.log("pdfComponent:", this.pdfComponent);
   }
 
+  //local pdf
+  /*** 
+  src;
+  onFileSelected() {
+  console.log('onFileSelected');
+  let $img: any = document.querySelector('#file');
+
+  if (typeof (FileReader) !== 'undefined') {
+    console.log('onFileSelected: loading reader');
+    let reader = new FileReader();
+
+    reader.onload = (e: any) => {
+      this.src = e.target.result;
+    };
+
+    reader.readAsArrayBuffer($img.files[0]);
+  }
+}
+***/
+  //local pdf
 
   //redirect
   showPdf(): void {
